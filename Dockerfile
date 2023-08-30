@@ -2,7 +2,7 @@
 FROM maven:3.6.3-openjdk-11-slim AS build
 WORKDIR /app
 COPY pom.xml .
-RUN mvn
+#?RUN mvn clean package
 COPY src ./src
 RUN mvn package -DskipTests
 
