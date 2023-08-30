@@ -39,8 +39,8 @@ jobs:
       #    tags: github-docker-project:${{ github.run_number }}
 
       - name: Push Docker Image
-      run: |
-        docker tag gw111/git-action:latest
-        docker push gw111/git-action:latest
+        run: |
+          docker tag gw111/git-action:latest
+          docker push gw111/git-action:latest
 
 
