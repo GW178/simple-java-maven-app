@@ -1,5 +1,5 @@
 # build
-FROM maven:3.6.8-openjdk-11-slim AS build
+FROM maven:3.8-jdk-11 as build
 WORKDIR /app
 COPY pom.xml .
 #?RUN mvn clean package
