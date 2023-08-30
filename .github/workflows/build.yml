@@ -18,6 +18,11 @@ jobs:
           java-version: 11
           distribution: 'adopt'
 
+      - name: Set up Maven
+        uses: apache/maven@v3
+        with:
+          maven-version: 3.8.6  # Specify the desired Maven version
+
       - name: Build Maven project
         run: mvn package -B
 
@@ -27,3 +32,4 @@ jobs:
           context: .
           push: true
           tags: gw111/gw_repo/project_v${{ github.run_number }}
+
