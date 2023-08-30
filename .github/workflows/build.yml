@@ -19,9 +19,9 @@ jobs:
           distribution: 'adopt'
 
       - name: Set up Maven
-        uses: apache/maven@v3
+        uses: actions/setup-maven@v2
         with:
-          maven-version: 3.8.6  # Specify the desired Maven version
+          maven-version: '3.8.4'
 
       - name: Build Maven project
         run: mvn package -B
