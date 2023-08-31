@@ -42,5 +42,10 @@ jobs:
         run: |
           docker build -t gw111/git-action:latest .
           docker push gw111/git-action:latest
+          
+      - name: Deploy to Local Environment
+        run: |
+          docker pull gw111/git-action:latest
+          docker run -d -p 8080:8080 --name git-action gw111/git-action:latest
 
 
